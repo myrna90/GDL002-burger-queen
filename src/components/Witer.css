@@ -1,12 +1,3 @@
-.login{
-    margin: 0;
-    background-image: url("https://github.com/myrna90/GDL002-burger-queen/blob/desarrollo/src/img/burger.jpg?raw=true");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-resolution: 60%;
-    height: 800px;
-}
-
 .btn{
     position: relative;
     display: flex;
@@ -22,5 +13,4 @@
     appearance: none;
     cursor: pointer;
     transition: 250ms, box-shadow 250ms;
-  
-  }
+}

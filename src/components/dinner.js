@@ -1,4 +1,4 @@
-{"dinner":[
+const dinner = [
     {
         "name":"Hamburguesa Res sencilla",
         "price":"10.00"    
@@ -56,4 +56,4 @@
         "price": "$7"
     }
 ]
-}
+export default dinner

@@ -8,9 +8,10 @@ class Kitchen extends Component {
 
             <div>
                 <div className='logo2'>
-                    Cocina
+                    <h1>Burger Queen</h1>
+                    <h2>Cocina</h2>
 
-                    <Link className='btnBase redBtn' to="/">Inicio</Link>
+                    <Link className='btn btnStart' to="/">Inicio</Link>
 
                 </div>
             </div>

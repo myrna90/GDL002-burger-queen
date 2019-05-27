@@ -1,5 +1,6 @@
-/*import app from "firebase/app"
-const config ={
+import app from "firebase/app";
+
+const config={
     apiKey: "AIzaSyDT7ALOBhurm20SlZuaOfRZdGVQDbCHIRo",
     authDomain: "menureact-b2d84.firebaseapp.com",
     databaseURL: "https://menureact-b2d84.firebaseio.com",
@@ -15,4 +16,4 @@ class Firebase{
     }
 }
 
-export default Firebase;*/
+export default Firebase;

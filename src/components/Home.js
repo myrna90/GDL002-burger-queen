@@ -7,12 +7,12 @@ function Home() {
     return (
         <div className='login'>
             <div className='logo'>
-                Burger Queen
+            <h1>Burger Queen</h1>
             </div>
 
             <div>
-                <Link className='btnBase redBtn' to="/Witer">Mesero</Link>
-                <Link className='btnBase whiteBtn' to="/Kitchen">Cocina</Link>
+                <Link className='btn btnWiter' to="/Witer">Mesero</Link>
+                <Link className='btn btnKitchen' to="/Kitchen">Cocina</Link>
     
             </div>
 
