@@ -1,13 +1,15 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import breakfast from "./breakfast";
+import Button from 'react-bootstrap/Button';
 
 class Buttonbreak extends React.Component{
     constructor(props){
         super(props);
         this.state={
             breakfast,   
-            order:[] 
+            order:[],
+            total: 0
         };
     }
     add(name, price){
@@ -30,7 +32,8 @@ class Buttonbreak extends React.Component{
         }
         this.setState({
             order: newOrder,
-        })
+            total: this.state.total + parseInt(price)
+        });
     }
 
     viewBreak(){
@@ -38,7 +41,7 @@ class Buttonbreak extends React.Component{
             menu: breakfast,
             state: this.state
         })
-    }
+    };
     delete(name, i){
         this.state.order.forEach((order)=>{
             if(order.name == name){
@@ -66,21 +69,35 @@ class Buttonbreak extends React.Component{
             <input type="button" value="breakfast" onClick={()=>{this.viewBreak();}}/>
                 {breakfast.map((menu, i)=>
                 <div key={i}> 
-                <button className="btn btnBreak" value={menu.price} onClick={()=>{this.add(menu.name, menu.price)}}>{menu.name + " " + " " + menu.price}</button>                    
+                <Button variant="outline-primary" value={menu.price} onClick={()=>{this.add(menu.name, menu.price)}}>{menu.name + " " + " " + menu.price}</Button>                    
                 </div>)}
                 <div className="screenOrder">
                 <h1>Pedidos</h1>
                     <table>
-                        <tr><th>Cantidad</th><th>Producto</th>       <th>Total</th><th></th></tr>
+                        <tr>
+                            <th>Cantidad</th>
+                            <th>Producto</th>       
+                            <th>Precio</th><th></th>
+                        </tr>
                         {this.state.order.map((menu, i) =>
-                            <tr><td>{menu.cant}</td><td>{menu.name}</td><td><td>{menu.price}</td>{menu.price * menu.cant}</td>
-                            <td><input type='button' value='Eliminar'onClick={()=> {this.delete(menu.name, i);}}/></td></tr>
-                           
+                            <tr>
+                                <td>{menu.cant}</td>
+                                <td>{menu.name}</td>
+                                <td>${menu.price}</td>
+                                <td><Button variant="outline-primary" value='Eliminar'onClick={()=> {this.delete(menu.name, i);}}>Eliminar</Button></td>
+                            </tr>
                         )}
+                        <tr>
+                                <td>
+                                    Total
+                                </td>
+                                <td>${this.state.total}</td>
+                        </tr>
+                           
                         </table>
                   </div>
                   <div>
-                  <Link className='btn btnStart' to="/">Inicio</Link>
+                  <Link type ="button" variant="outline-primary" to="/">Inicio</Link>
                   </div>
             </div>
             
