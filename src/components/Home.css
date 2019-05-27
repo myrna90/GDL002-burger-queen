@@ -1,0 +1,26 @@
+.login{
+    margin: 0;
+    background-image: url("https://github.com/myrna90/GDL002-burger-queen/blob/desarrollo/src/img/burger.jpg?raw=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-resolution: 60%;
+    height: 800px;
+}
+
+.buttonStart{
+    position: relative;
+    display: flex;
+    margin: 2%;
+    padding: 1.5rem 4.5rem;
+    background: #FFF1F1;;
+    color: black;
+    font-size: 2rem;
+    font-weight: 300;
+    border: 1;
+    border-radius: 0.4rem;
+    box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+    appearance: none;
+    cursor: pointer;
+    transition: 250ms, box-shadow 250ms;
+  
+  }
