@@ -1,23 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Spa } from 'react-router-dom';
-import './App.css';
-import Home from "./Home";
-import Witer from ".Witer"
-import Kitchen from "./Kitchen"
+import React,{Component} from 'react';
+import {BrowserRouter,Link, Route, Switch} from 'react-router-dom';
+import Home from "./components/Home";
+import Witer from "./components/Witer";
+import Kitchen from "./components/Kitchen";
+import Buttonbreak from "./components/Buttonbreak";
+import Buttondinner from "./components/Buttondinner"
 
-class App extends Component() {
+
+class App extends Component{
   render(){
     return(
-    <BrowserRouter>
-    <switch>
-      <Route path="/" Component={Home}/>
-      <Route path="/Witer" Component={Witer}/>
-      <Route path="/Kitchen" Component={Kitchen}/>
-    </switch>
+      <div>
+<BrowserRouter>
+    <Switch>
+      <Route path="/" component={Home} exact/>
+      <Route path="/Witer" component={Witer}/>
+      <Route path="/Kitchen" component={Kitchen}/>
+      <Route path="/ButtonBreak" component={Buttonbreak}/>
+      <Route path="/Buttondinner" component={Buttondinner}/>
+    </Switch>
     </BrowserRouter>
-      )
+      </div>
+  
+  );
   }
  
-}
+};
 
 export default App;
