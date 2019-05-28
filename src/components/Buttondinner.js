@@ -60,7 +60,7 @@ class Buttondinner extends React.Component{
 
             <div className ="menu">
             <div className='logo'>
-            <h1>Burger Queen</h1>
+            <img src="https://github.com/myrna90/GDL002-burger-queen/blob/desarrollo/img/queen-b.jpg?raw=true"/>
             </div>
             
             <div>

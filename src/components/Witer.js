@@ -7,7 +7,7 @@ class Witer extends React.Component {
         return(
             <div className='menu btnmenu'>
     <div className='logo'>
-    <h1>Burger Queen</h1>
+    <img src="https://github.com/myrna90/GDL002-burger-queen/blob/desarrollo/img/queen-b.jpg?raw=true"/>
     <h2>Mesero</h2>
     </div>
 

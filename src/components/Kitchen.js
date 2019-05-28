@@ -8,7 +8,7 @@ class Kitchen extends Component {
 
             <div>
                 <div className='logo2'>
-                    <h1>Burger Queen</h1>
+                <img src="https://github.com/myrna90/GDL002-burger-queen/blob/desarrollo/img/queen-b.jpg?raw=true"/>
                     <h2>Cocina</h2>
 
                     <Link to="/"><Button variant="outline-primary">Inicio</Button></Link>
