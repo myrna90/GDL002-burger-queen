@@ -66,7 +66,7 @@ class Buttonbreak extends React.Component{
             </div>
             
             <div>
-            <input type="button" value="breakfast" onClick={()=>{this.viewBreak();}}/>
+            <Button type="button" value="breakfast" onClick={()=>{this.viewBreak();}}>Breakfast</Button>
                 {breakfast.map((menu, i)=>
                 <div key={i}> 
                 <Button variant="outline-primary" value={menu.price} onClick={()=>{this.add(menu.name, menu.price)}}>{menu.name + " " + " " + menu.price}</Button>                    
@@ -97,7 +97,7 @@ class Buttonbreak extends React.Component{
                         </table>
                   </div>
                   <div>
-                  <Link type ="button" variant="outline-primary" to="/">Inicio</Link>
+                  <Link to="/"><Button variant="outline-primary">Inicio</Button></Link>
                   </div>
             </div>
             

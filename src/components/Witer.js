@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 class Witer extends React.Component {
     render(){
@@ -11,12 +12,12 @@ class Witer extends React.Component {
     </div>
 
     <div>
-        <Link className='btn btnBreak' to="/Buttonbreak">Breakfast</Link>
-        <Link className='btn btnDinner' to="/Buttondinner">Dinner</Link>
+        <Link to="/Buttonbreak"><Button variant="outline-primary">Breakfast</Button></Link>
+        <Link to="/Buttondinner"><Button variant="outline-primary">Dinner</Button></Link>
 
     </div>
 <div>
-    <Link className='btn btnStart' to="/">Inicio</Link>
+    <Link to="/"><Button variant="outline-primary">Inicio</Button></Link>
     </div>
 </div>
 

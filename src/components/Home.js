@@ -13,8 +13,8 @@ function Home() {
             </div>
 
             <div>
-                <Link  variant="outline-light" to="/Witer">Mesero</Link>
-                <Link  variant="outline-light" to="/Kitchen">Cocina</Link>
+                <Link  to="/Witer"><Button variant="outline-primary">Mesero</Button></Link>
+                <Link  to="/Kitchen"><Button variant="outline-primary">Cocina</Button></Link>
     
             </div>
         </div>

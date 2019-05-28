@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import dinner from "./dinner";
+import Button from 'react-bootstrap/Button';
 
 class Buttondinner extends React.Component{
     constructor(props){
@@ -63,24 +64,38 @@ class Buttondinner extends React.Component{
             </div>
             
             <div>
-            <input type="button" value="dinner" onClick={()=>{this.viewDinner();}}/>
+            <Button type="button" value="dinner" onClick={()=>{this.viewDinner();}}>Dinner</Button>
                 {dinner.map((menu, i)=>
                 <div key={i}> 
-                <button className="btn btnDinner" value={menu.price} onClick={()=>{this.add(menu.name, menu.price)}}>{menu.name + " " + " " + menu.price}</button>                    
+                <Button variant="outline-primary" value={menu.price} onClick={()=>{this.add(menu.name, menu.price)}}>{menu.name + " " + " " + menu.price}</Button>                    
                 </div>)}
                 <div className="screenOrder">
                 <h1>Pedidos</h1>
                     <table>
-                        <tr><th>Cantidad</th><th>Producto</th>       <th>Total</th><th></th></tr>
+                        <tr>
+                            <th>Cantidad</th>
+                            <th>Producto</th>       
+                            <th>Precio</th><th></th>
+                        </tr>
                         {this.state.order.map((menu, i) =>
-                            <tr><td>{menu.cant}</td><td>{menu.name}</td><td><td>{menu.price}</td>{menu.price * menu.cant}</td>
-                            <td><input type='button' value='Eliminar'onClick={()=> {this.delete(menu.name, i);}}/></td></tr>
-                           
+                            <tr>
+                                <td>{menu.cant}</td>
+                                <td>{menu.name}</td>
+                                <td>${menu.price}</td>
+                                <td><Button variant="outline-primary" value='Eliminar'onClick={()=> {this.delete(menu.name, i);}}>Eliminar</Button></td>
+                            </tr>
                         )}
+                        <tr>
+                                <td>
+                                    Total
+                                </td>
+                                <td>${this.state.total}</td>
+                        </tr>
+                           
                         </table>
                   </div>
                   <div>
-                  <Link className='btn btnStart' to="/">Inicio</Link>
+                  <Link to="/"><Button variant="outline-primary">Inicio</Button></Link>
                   </div>
             </div>
             
