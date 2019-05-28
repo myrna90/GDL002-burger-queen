@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import dinner from "./dinner";
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 
 class Buttondinner extends React.Component{
     constructor(props){
@@ -71,28 +72,33 @@ class Buttondinner extends React.Component{
                 </div>)}
                 <div className="screenOrder">
                 <h1>Pedidos</h1>
-                    <table>
-                        <tr>
-                            <th>Cantidad</th>
-                            <th>Producto</th>       
-                            <th>Precio</th><th></th>
-                        </tr>
-                        {this.state.order.map((menu, i) =>
+                    <Table responsive striped bordered hover>
+                    <thead>
+                 <tr>
+                <th>Cantidad</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                </tr>
+                
+                </thead>
+                {this.state.order.map((menu, i) =>(     
+                            <tbody>
+                            
                             <tr>
-                                <td>{menu.cant}</td>
-                                <td>{menu.name}</td>
-                                <td>${menu.price}</td>
-                                <td><Button variant="outline-primary" value='Eliminar'onClick={()=> {this.delete(menu.name, i);}}>Eliminar</Button></td>
+                              <td>{menu.cant}</td>
+                              <td>{menu.name}</td>
+                              <td>${menu.price}</td>
+                              <td><Button variant="outline-primary" value='Eliminar'onClick={()=> {this.delete(menu.name, i);}}>Eliminar</Button></td>
                             </tr>
-                        )}
-                        <tr>
-                                <td>
-                                    Total
-                                </td>
-                                <td>${this.state.total}</td>
-                        </tr>
-                           
-                        </table>
+                          </tbody>
+                          ))}
+                          <tr>
+                              <td>Total</td>
+                              <td>${this.state.total}</td>
+                            </tr>
+                    </Table>
+                    
+                          
                   </div>
                   <div>
                   <Link to="/"><Button variant="outline-primary">Inicio</Button></Link>
